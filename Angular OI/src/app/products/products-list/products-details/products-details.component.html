@@ -1,0 +1,31 @@
+<div class="modal-header">
+  <div class="container">
+    <div class="row justify-content-center">
+      <h4 class="modal-title">{{ product.title }}</h4>
+    </div>
+  </div>
+</div>
+<div class="modal-body">
+  <div class="container">
+    <div class="row justify-content-center border border-secondary">
+      <img [src]="product.image" class="img-size" alt="..." />
+    </div>
+    <div class="row justify-content-center mt-3">
+      <p class="lh-base">{{ product.description }}</p>
+    </div>
+    <div class="row justify-content-center">
+      <p class="mr-2 p-2 border border-success" translate>
+        product.details.submit <span>{{ product.price }}</span>
+      </p>
+      <p class="mr-2 p-2 border border-success" translate>
+        product.details.quantity <span>{{ product.quantity }}</span>
+      </p>
+      <p class="mr-2 p-2 border border-success" translate>
+        product.details.id <span>{{ product.id }}</span>
+      </p>
+    </div>
+  </div>
+</div>
+<div class="modal-footer">
+  <button type="button" class="btn btn-outline-dark" (click)="activeModal.close('Close click')">Close</button>
+</div>

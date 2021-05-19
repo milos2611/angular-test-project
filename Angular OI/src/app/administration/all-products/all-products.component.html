@@ -1,0 +1,45 @@
+<div class="container">
+  <div class="jumbotron">
+    <div class="list-group">
+      <button type="button" class="btn btn-success mb-3" routerLink="/admin/product/add" translate>
+        admin.product.add
+      </button>
+      <div
+        type="button"
+        class="list-group-item list-group-item-action"
+        aria-current="true"
+        *ngFor="let product of products"
+      >
+        <div class="container">
+          <div class="row justify-content-between">
+            <p translate>
+              admin.product.id <span>{{ product.id }}</span>
+            </p>
+            <p translate>
+              admin.product.title <span>{{ product.title }}</span>
+            </p>
+            <p translate>
+              admin.product.price <span>{{ product.price }}</span>
+            </p>
+            <p translate>
+              admin.product.quantity <span>{{ product.quantity }}</span>
+            </p>
+
+            <div>
+              <button
+                class="btn btn-outline-secondary mr-3 btn-sm btn-size"
+                (click)="editProduct(product.id)"
+                translate
+              >
+                admin.product.edit
+              </button>
+              <button class="btn btn-outline-danger btn-sm btn-size" (click)="deleteProduct(product)" translate>
+                admin.product.delete
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

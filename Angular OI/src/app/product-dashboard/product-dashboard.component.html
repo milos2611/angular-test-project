@@ -1,0 +1,12 @@
+<div class="form-group">
+  <input
+    type="range"
+    class="form-control-range"
+    id="formControlRange"
+    [max]="maxValue"
+    [min]="minValue"
+    [(ngModel)]="price"
+  />
+  {{ price | currency: 'EUR':true }}
+</div>
+<app-pie-chart *ngIf="products" [products]="products | filterCurrency: price"> </app-pie-chart>

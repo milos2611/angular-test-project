@@ -1,0 +1,13 @@
+<div>
+  <form (ngSubmit)="onSubmit()" [formGroup]="form">
+    <div *ngFor="let dynamic of dynamics">
+      <app-dynamic-reactive-form [dynamic]="dynamic" [form]="form"></app-dynamic-reactive-form>
+    </div>
+
+    <div class="form-row">
+      <button type="submit" class="btn btn-primary" *ngIf="form.valid" translate>
+        <span translate>dynamic.form.save</span>
+      </button>
+    </div>
+  </form>
+</div>
